@@ -1,21 +1,44 @@
 {
-  "name": "rots-map",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "K.J. Valencik",
-  "license": "MIT",
-  "dependencies": {
-    "bluebird": "^3.5.0",
-    "highland": "^2.11.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "*",
-    "babel-preset-env": "*",
-    "babel-register": "^6.24.1"
-  }
+	"name": "rots-map",
+	"version": "1.0.0",
+	"description": "",
+	"main": "build/parser/index.js",
+	"author": "K.J. Valencik",
+	"license": "MIT",
+	"config": {
+		"ignore": "!(.git|.nyc_output|build|coverage|data|node_modules)",
+		"test": "test/**/*.test.js"
+	},
+	"scripts": {
+		"prebuild": "npm run clean",
+		"build": "babel src -D -d build -s inline",
+		"clean": "rm -rf .nyc_output build coverage",
+		"eslint": "eslint .",
+		"prelint": "npm run lintspaces",
+		"lint": "npm run eslint",
+		"lintspaces": "lintspaces -. -n -l 2 -t -i js-comments -d tabs '*' \"$npm_package_config_ignore/**/!(*.wld)\"",
+		"mocha": "cross-env NODE_ENV=test mocha --compilers js:babel-register",
+		"pretest": "npm run lint",
+		"test": "npm run unit",
+		"unit": "cross-env NODE_ENV=test nyc mocha \"$npm_package_config_test\""
+	},
+	"dependencies": {
+		"bluebird": "^3.5.0",
+		"highland": "^2.11.1"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-eslint": "^7.2.3",
+		"babel-plugin-istanbul": "^4.1.4",
+		"babel-plugin-transform-object-rest-spread": "*",
+		"babel-preset-env": "*",
+		"babel-register": "^6.24.1",
+		"cross-env": "^5.0.1",
+		"eslint": "^4.3.0",
+		"eslint-config-airbnb-base": "^11.3.1",
+		"eslint-plugin-import": "^2.7.0",
+		"lintspaces-cli": "^0.6.0",
+		"mocha": "^3.4.2",
+		"nyc": "^11.0.3"
+	}
 }

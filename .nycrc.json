@@ -1,0 +1,23 @@
+{
+	"check-coverage" : true,
+	"lines" : 100,
+	"statements" : 100,
+	"functions" : 100,
+	"branches" : 100,
+	"reporter" : [
+		"text",
+		"text-summary",
+		"html"
+	],
+	"cache" : true,
+	"all" : true,
+	"sourceMap" : false,
+	"instrument" : false,
+	"require" : ["babel-register"],
+	"exclude" : [
+		"test",
+		"build/**",
+		"coverage/**",
+		"node_modules/**"
+	]
+}

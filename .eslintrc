@@ -1,0 +1,28 @@
+{
+	"root" : true,
+	"extends" : [
+		"airbnb-base",
+		"eslint-config-airbnb-base/rules/strict"
+	],
+	"rules" : {
+		"brace-style" : ["error", "1tbs", { "allowSingleLine" : false }],
+		"comma-dangle" : ["error", "never"],
+		"curly" : ["error", "all"],
+		"indent" : ["error", "tab", {
+			"SwitchCase" : 1,
+			"VariableDeclarator" : 1
+		}],
+		"key-spacing" : ["error", {
+			"beforeColon" : true,
+			"afterColon" : true,
+			"mode" : "minimum"
+		}],
+		"new-cap" : ["error", { "capIsNew" : false, "newIsCap" : true }],
+		"no-mixed-spaces-and-tabs" : ["error", "smart-tabs"],
+		"no-multi-spaces" : ["error", {
+			"exceptions" : { "Property" : true }
+		}],
+		"no-tabs" : ["off"],
+		"quotes" : ["error", "double"]
+	}
+}

@@ -1,4 +1,4 @@
-import highland from 'highland';
+import highland from "highland";
 
 const [
 	INITIAL,
@@ -6,7 +6,6 @@ const [
 	TITLE,
 	DESCRIPTION,
 	ROOM_FLAGS,
-	EXIT_INITIAL,
 	EXIT_DIRECTION,
 	EXIT_DESCRIPTION,
 	EXIT_NAME,
@@ -14,19 +13,25 @@ const [
 	FILE_END
 ] = {
 	[Symbol.iterator]() {
-		let i = 0;
+		let value = -1;
 
-		return { next : () => ({ value : i++ })	};
+		return {
+			next() {
+				value += 1;
+
+				return { value };
+			}
+		};
 	}
 };
 
 const DIRECTIONS = Object.freeze({
-	D0 : 'NORTH',
-	D1 : 'EAST',
-	D2 : 'SOUTH',
-	D3 : 'WEST',
-	D4 : 'UP',
-	D5 : 'DOWN'
+	D0 : "NORTH",
+	D1 : "EAST",
+	D2 : "SOUTH",
+	D3 : "WEST",
+	D4 : "UP",
+	D5 : "DOWN"
 });
 
 class Room {
@@ -43,8 +48,8 @@ class Room {
 			number : this.number,
 			flags : this.flags,
 			exits : this.exits,
-			title : this.title.join('\n').slice(0, -1),
-			description : this.description.join('\n').slice(0, -1)
+			title : this.title.join("\n").slice(0, -1),
+			description : this.description.join("\n").slice(0, -1)
 		};
 	}
 }
@@ -61,18 +66,18 @@ class Exit {
 		return {
 			direction : this.direction,
 			flags : this.flags,
-			description : this.description.join('\n').slice(0, -1),
-			name : this.name.join('\n').slice(0, -1)
+			description : this.description.join("\n").slice(0, -1),
+			name : this.name.join("\n").slice(0, -1)
 		};
 	}
 }
 
-export default function parseFile(input) {
+export default function WorldParser() {
 	let state = INITIAL;
 	let room = null;
 	let exit = null;
 
-	function consumeNextLine(err, x, push, next) {
+	function consumeNextLine(err, x = {}, push, next) {
 		const { line, text } = x;
 
 		// Pass along errors
@@ -85,10 +90,8 @@ export default function parseFile(input) {
 
 		// End of stream
 		if (x === highland.nil) {
-			if (state === NUMBER) {
-				push(null, room);
-			} else if (state !== INITIAL && state !== FILE_END) {
-				push(new SyntaxError('Unexpected end of stream'));
+			if (state !== INITIAL && state !== FILE_END) {
+				push(new SyntaxError("Unexpected end of stream"));
 			}
 
 			push(null, x);
@@ -96,7 +99,7 @@ export default function parseFile(input) {
 			return;
 		}
 
-		if (text === '$~') {
+		if (text === "$~") {
 			if (state <= TITLE) {
 				state = FILE_END;
 			} else {
@@ -108,12 +111,19 @@ export default function parseFile(input) {
 		}
 
 		switch (state) {
-			case FILE_END:
-				next();
-				break;
 			case INITIAL:
-				room = new Room();
+				if (text) {
+					state = NUMBER;
+					consumeNextLine(err, x, push, next);
+				} else {
+					next();
+				}
+
+				break;
+
 			case NUMBER:
+				room = new Room();
+
 				if (/^#[0-9]+\s*$/.test(text)) {
 					room.number = parseInt(text.slice(1), 10);
 					state = TITLE;
@@ -127,7 +137,7 @@ export default function parseFile(input) {
 			case TITLE:
 				room.title.push(text);
 
-				if (text.slice(-1) === '~') {
+				if (text.slice(-1) === "~") {
 					state = DESCRIPTION;
 				}
 
@@ -138,7 +148,7 @@ export default function parseFile(input) {
 			case DESCRIPTION:
 				room.description.push(text);
 
-				if (text.slice(-1) === '~') {
+				if (text.slice(-1) === "~") {
 					state = ROOM_FLAGS;
 				}
 
@@ -147,9 +157,9 @@ export default function parseFile(input) {
 				break;
 
 			case ROOM_FLAGS:
-				if (/^[0-9]+ [0-9]+ [0-9]+(?: [0-9]+)?$/.test(text)) {
-					room.flags = text.split(' ').map(Number);
-					state = EXIT_INITIAL;
+				if (/^\d+(?: \d+)*$/.test(text)) {
+					room.flags = text.split(" ").map(Number);
+					state = EXIT_DIRECTION;
 				} else {
 					push(new SyntaxError(`Invalid room flags on line ${line}`));
 				}
@@ -158,23 +168,20 @@ export default function parseFile(input) {
 
 				break;
 
-			case EXIT_INITIAL:
-				if (text === 'S') {
+			case EXIT_DIRECTION:
+				if (text === "S") {
 					state = INITIAL;
-
 					push(null, room.toJSON());
 					next();
-
-					break;
 				} else {
 					exit = new Exit();
-				}
-			case EXIT_DIRECTION:
-				if (DIRECTIONS[text]) {
-					exit.direction = DIRECTIONS[text];
-					state = EXIT_DESCRIPTION;
-				} else {
-					push(new SyntaxError(`Invalid direction on line ${line}`));
+
+					if (DIRECTIONS[text]) {
+						exit.direction = DIRECTIONS[text];
+						state = EXIT_DESCRIPTION;
+					} else {
+						push(new SyntaxError(`Invalid direction on line ${line}`));
+					}
 				}
 
 				next();
@@ -184,7 +191,7 @@ export default function parseFile(input) {
 			case EXIT_DESCRIPTION:
 				exit.description.push(text);
 
-				if (text.slice(-1) === '~') {
+				if (text.slice(-1) === "~") {
 					state = EXIT_NAME;
 				}
 
@@ -195,7 +202,7 @@ export default function parseFile(input) {
 			case EXIT_NAME:
 				exit.name.push(text);
 
-				if (text.slice(-1) === '~') {
+				if (text.slice(-1) === "~") {
 					state = EXIT_FLAGS;
 				}
 
@@ -204,10 +211,10 @@ export default function parseFile(input) {
 				break;
 
 			case EXIT_FLAGS:
-				if (/^[0-9]+ [0-9]+ [0-9]+ [0-9]+$/.test(text)) {
-					exit.flags = text.split(' ').map(Number);
+				if (/^\d+(?: \d+)*$/.test(text)) {
+					exit.flags = text.split(" ").map(Number);
 					room.exits.push(exit.toJSON());
-					state = EXIT_INITIAL;
+					state = EXIT_DIRECTION;
 				} else {
 					push(new SyntaxError(`Invalid exit flags on line ${line}`));
 				}
@@ -216,16 +223,21 @@ export default function parseFile(input) {
 
 				break;
 
+			case FILE_END:
+				next();
+				break;
+
 			// Unreachable
+			// istanbul ignore next
 			default:
 				push(new SyntaxError(`Invalid state (${state}) on line ${line}`));
 				next();
 		}
 	}
 
-	return highland(input)
+	return stream => stream
 		.map(line => line.toString())
-		.map(line => line.replace(/\n\r/g, '\n'))
+		.map(line => line.replace(/\n\r/g, "\n"))
 		.split()
 		.map((() => {
 			let line = 0;
@@ -238,8 +250,3 @@ export default function parseFile(input) {
 		})())
 		.consume(consumeNextLine);
 }
-
-parseFile(process.stdin)
-	.collect()
-	.map(JSON.stringify)
-	.each(console.log);

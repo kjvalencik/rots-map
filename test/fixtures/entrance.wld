@@ -1,0 +1,30 @@
+#3800  
+The Courtyard Entrance~
+   This is the entrance to this small, fortified camp.  To the north stands a
+thick gate with a large lock built into it.  Tall, stone walls surround the
+courtyard here, which extends all around.  Atop the wall to the east and west
+are wooden watchtowers where guards scan the surrounding countryside watching
+for trouble.  The main part of this keep lies to the south, where a two-story
+building sits, a portcullis leading  into it.  Red and black banners atop the
+walls flap in the breeze and several soldiers wearing the same colors parade
+around and train for an eventual fight. 
+~
+0 4 1 0
+D0
+A large gate lies to the north
+~
+gate~
+321 7522 3819 0
+D1
+~
+~
+0 0 3868 0
+D2
+~
+~
+0 0 3867 0
+D3
+~
+~
+0 0 3869 0
+S
