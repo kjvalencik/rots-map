@@ -1,5 +1,6 @@
 import highland from "highland";
 
+import { Enumerator } from "../utils";
 import Room from "./room";
 import Exit, { DIRECTIONS } from "./exit";
 
@@ -15,19 +16,7 @@ const [
 	EXIT_NAME,
 	EXIT_FLAGS,
 	FILE_END
-] = {
-	[Symbol.iterator]() {
-		let value = -1;
-
-		return {
-			next() {
-				value += 1;
-
-				return { value };
-			}
-		};
-	}
-};
+] = Enumerator;
 
 export default function WorldParser() {
 	let state = INITIAL;
