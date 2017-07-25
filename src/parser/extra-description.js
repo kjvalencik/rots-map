@@ -1,4 +1,4 @@
-export default class Room {
+export default class ExtraDescription {
 	constructor() {
 		this.keyword = [];
 		this.description = [];
