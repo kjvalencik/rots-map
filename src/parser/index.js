@@ -1,5 +1,8 @@
 import highland from "highland";
 
+import Room from "./room";
+import Exit, { DIRECTIONS } from "./exit";
+
 const [
 	INITIAL,
 	NUMBER,
@@ -25,53 +28,6 @@ const [
 		};
 	}
 };
-
-const DIRECTIONS = Object.freeze({
-	D0 : "NORTH",
-	D1 : "EAST",
-	D2 : "SOUTH",
-	D3 : "WEST",
-	D4 : "UP",
-	D5 : "DOWN"
-});
-
-class Room {
-	constructor() {
-		this.number = 0;
-		this.title = [];
-		this.description = [];
-		this.flags = [];
-		this.exits = [];
-	}
-
-	toJSON() {
-		return {
-			number : this.number,
-			flags : this.flags,
-			exits : this.exits,
-			title : this.title.join("\n").slice(0, -1),
-			description : this.description.join("\n").slice(0, -1)
-		};
-	}
-}
-
-class Exit {
-	constructor() {
-		this.direction = DIRECTIONS.D0;
-		this.description = [];
-		this.name = [];
-		this.flags = [];
-	}
-
-	toJSON() {
-		return {
-			direction : this.direction,
-			flags : this.flags,
-			description : this.description.join("\n").slice(0, -1),
-			name : this.name.join("\n").slice(0, -1)
-		};
-	}
-}
 
 export default function WorldParser() {
 	let state = INITIAL;
