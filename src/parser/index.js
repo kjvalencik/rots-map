@@ -2,7 +2,7 @@ import highland from "highland";
 
 import { Enumerator } from "../utils";
 import Room from "./room";
-import Exit, { DIRECTIONS } from "./exit";
+import Exit from "./exit";
 
 const [
 	INITIAL,
@@ -14,7 +14,7 @@ const [
 	EXIT_DIRECTION,
 	EXIT_DESCRIPTION,
 	EXIT_NAME,
-	EXIT_FLAGS,
+	EXIT_INFO,
 	FILE_END
 ] = Enumerator;
 
@@ -94,12 +94,7 @@ export default function WorldParser() {
 				if (text === "S") {
 					state = INITIAL;
 				} else {
-					if (!DIRECTIONS[text]) {
-						throw new SyntaxError("Invalid direction");
-					}
-
-					exit = new Exit();
-					exit.direction = DIRECTIONS[text];
+					exit = new Exit(text);
 					state = EXIT_DESCRIPTION;
 				}
 
@@ -118,18 +113,17 @@ export default function WorldParser() {
 				exit.name.push(text);
 
 				if (text.slice(-1) === "~") {
-					state = EXIT_FLAGS;
+					state = EXIT_INFO;
 				}
 
 				break;
 
-			// TODO: parse exit flags
-			case EXIT_FLAGS:
+			case EXIT_INFO:
 				if (!/^\d+(?: \d+)*$/.test(text)) {
-					throw new SyntaxError("Invalid exit flags");
+					throw new SyntaxError("Invalid exit info");
 				}
 
-				exit.flags = text.split(" ").map(Number);
+				exit.info = text.split(" ").map(Number);
 				room.exits.push(exit.toJSON());
 				state = EXIT_DIRECTION;
 

@@ -1,6 +1,3 @@
-// Disable eslint because it is expected to have more utilities. Remove after
-// they are added.
-// eslint-disable-next-line import/prefer-default-export
 export class Enumerator {
 	static [Symbol.iterator]() {
 		let value = -1;
@@ -13,4 +10,18 @@ export class Enumerator {
 			}
 		};
 	}
+}
+
+export function BitMask(items) {
+	const flags = items.reduce((acc, k, i) => Object.assign({}, acc, {
+		[k] : 2 ** i
+	}), {});
+
+	return function getFlags(bitmask) {
+		return Object
+			.keys(flags)
+			// Bit masks require bitwise operators, ignore the lint error
+			// eslint-disable-next-line no-bitwise
+			.filter(k => (flags[k] & bitmask));
+	};
 }

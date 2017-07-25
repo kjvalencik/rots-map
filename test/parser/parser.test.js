@@ -41,24 +41,36 @@ describe("World Parser", () => {
 
 				assert.deepStrictEqual(exits, [{
 					direction : "NORTH",
-					flags : [321, 7522, 3819, 0],
+					key : 7522,
+					flags : ["EX_ISDOOR", "EX_DOORISHEAVY", "EX_NO_LOOK"],
 					description : "A large gate lies to the north\n",
-					name : "gate"
+					name : "gate",
+					toRoom : 3819,
+					width : 0
 				}, {
 					direction : "EAST",
-					flags : [0, 0, 3868, 0],
+					key : 0,
+					flags : [],
 					description : "",
-					name : ""
+					name : "",
+					toRoom : 3868,
+					width : 0
 				}, {
 					direction : "SOUTH",
-					flags : [0, 0, 3867, 0],
+					key : 0,
+					flags : [],
 					description : "",
-					name : ""
+					name : "",
+					toRoom : 3867,
+					width : 0
 				}, {
 					direction : "WEST",
-					flags : [0, 0, 3869, 0],
+					key : 0,
+					flags : [],
 					description : "",
-					name : ""
+					name : "",
+					toRoom : 3869,
+					width : 0
 				}]);
 			})
 	));

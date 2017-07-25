@@ -1,24 +1,4 @@
-const FLAGS = Object.freeze([
-	"DARK",
-	"DEATH",
-	"NO_MOB",
-	"INDOORS",
-	"NORIDE",
-	"PERMAFFECT",
-	"SHADOWY	",
-	"NO_MAGIC",
-	"TUNNEL",
-	"PRIVATE",
-	"GODROOM",
-	"BFS_MARK",
-	"DRINK_WATER",
-	"DRINK_POISON",
-	"SECURITYROOM",
-	"PEACEROOM",
-	"NO_TELEPORT"
-].reduce((acc, k, i) => Object.assign({}, acc, {
-	[k] : 2 ** i
-}), {}));
+import { BitMask } from "../utils";
 
 const SECTORS = Object.freeze([
 	"SECT_INSIDE",
@@ -36,13 +16,25 @@ const SECTORS = Object.freeze([
 	"SECT_SWAMP"
 ]);
 
-function parseFlags(bitmask) {
-	return Object
-		.keys(FLAGS)
-		// Bit masks require bitwise operators, ignore the lint error
-		// eslint-disable-next-line no-bitwise
-		.filter(k => (FLAGS[k] & bitmask));
-}
+const getFlags = BitMask([
+	"DARK",
+	"DEATH",
+	"NO_MOB",
+	"INDOORS",
+	"NORIDE",
+	"PERMAFFECT",
+	"SHADOWY	",
+	"NO_MAGIC",
+	"TUNNEL",
+	"PRIVATE",
+	"GODROOM",
+	"BFS_MARK",
+	"DRINK_WATER",
+	"DRINK_POISON",
+	"SECURITYROOM",
+	"PEACEROOM",
+	"NO_TELEPORT"
+]);
 
 export default class Room {
 	constructor() {
@@ -58,7 +50,7 @@ export default class Room {
 	}
 
 	set info([, flags, type, level]) {
-		this.flags = parseFlags(flags);
+		this.flags = getFlags(flags);
 		this.type = SECTORS[type];
 		this.level = level;
 
