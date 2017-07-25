@@ -1,10 +1,17 @@
 {
-	"name": "rots-map",
+	"name": "rots-parser",
 	"version": "1.0.0",
 	"description": "",
+	"engines:": {
+		"node": ">=6.0.0"
+	},
 	"main": "build/parser/index.js",
 	"author": "K.J. Valencik",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:kvalencik/rots-parser.git"
+	},
 	"config": {
 		"ignore": "!(.git|.nyc_output|build|coverage|data|node_modules)",
 		"test": "test/**/*.test.js"
