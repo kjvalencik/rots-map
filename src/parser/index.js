@@ -5,6 +5,7 @@ const [
 	NUMBER,
 	TITLE,
 	DESCRIPTION,
+	EXTRA_DESCRIPTION,
 	ROOM_FLAGS,
 	EXIT_DIRECTION,
 	EXIT_DESCRIPTION,
@@ -149,13 +150,28 @@ export default function WorldParser() {
 				room.description.push(text);
 
 				if (text.slice(-1) === "~") {
-					state = ROOM_FLAGS;
+					state = EXTRA_DESCRIPTION;
 				}
 
 				next();
 
 				break;
 
+			// TODO: Implement extra description parsing
+			case EXTRA_DESCRIPTION:
+				if (text[0] === "E") {
+					push(new SyntaxError(
+						`Extra description not implemented, see line ${line}`
+					));
+					next();
+				} else {
+					state = ROOM_FLAGS;
+					consumeNextLine(err, x, push, next);
+				}
+
+				break;
+
+			// TODO: Parse room flags
 			case ROOM_FLAGS:
 				if (/^\d+(?: \d+)*$/.test(text)) {
 					room.flags = text.split(" ").map(Number);
@@ -210,6 +226,7 @@ export default function WorldParser() {
 
 				break;
 
+			// TODO: parse exit flags
 			case EXIT_FLAGS:
 				if (/^\d+(?: \d+)*$/.test(text)) {
 					exit.flags = text.split(" ").map(Number);

@@ -110,6 +110,14 @@ describe("World Parser", () => {
 			})
 	));
 
+	it("should error if world file includes extra description", () => (
+		highland(["#123\n~\n~\nE Not Implemented"])
+			.through(WorldParser())
+			.toPromise(Bluebird)
+			.then(() => Bluebird.reject(new Error("did not throw")))
+			.catch(SyntaxError, assert.ok)
+	));
+
 	it("should error on invalid room flags", () => (
 		highland(["#123\n", "~\n", "~\n", "invalid flags"])
 			.through(WorldParser())
