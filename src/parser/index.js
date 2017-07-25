@@ -34,8 +34,131 @@ export default function WorldParser() {
 	let room = null;
 	let exit = null;
 
-	function consumeNextLine(err, x = {}, push, next) {
-		const { line, text } = x;
+	function consumeNextLine(text) {
+		if (text === "$~") {
+			if (state > TITLE) {
+				throw new SyntaxError("Invalid end of file marker");
+			}
+
+			state = FILE_END;
+		}
+
+		switch (state) {
+			case INITIAL:
+				if (text) {
+					state = NUMBER;
+					consumeNextLine(text);
+				}
+
+				break;
+
+			case NUMBER:
+				if (!/^#[0-9]+\s*$/.test(text)) {
+					throw new SyntaxError("Invalid room number");
+				}
+
+				room = new Room();
+				room.number = parseInt(text.slice(1), 10);
+				state = TITLE;
+
+				break;
+			case TITLE:
+				room.title.push(text);
+
+				if (text.slice(-1) === "~") {
+					state = DESCRIPTION;
+				}
+
+				break;
+
+			case DESCRIPTION:
+				room.description.push(text);
+
+				if (text.slice(-1) === "~") {
+					state = EXTRA_DESCRIPTION;
+				}
+
+				break;
+
+			// TODO: Implement extra description parsing
+			case EXTRA_DESCRIPTION:
+				if (text[0] === "E") {
+					throw new SyntaxError("Extra description not implemented");
+				}
+
+				state = ROOM_FLAGS;
+				consumeNextLine(text);
+
+				break;
+
+			// TODO: Parse room flags
+			case ROOM_FLAGS:
+				if (!/^\d+(?: \d+)*$/.test(text)) {
+					throw new SyntaxError("Invalid room flags");
+				}
+
+				room.flags = text.split(" ").map(Number);
+				state = EXIT_DIRECTION;
+
+				break;
+
+			case EXIT_DIRECTION:
+				if (text === "S") {
+					state = INITIAL;
+				} else {
+					if (!DIRECTIONS[text]) {
+						throw new SyntaxError("Invalid direction");
+					}
+
+					exit = new Exit();
+					exit.direction = DIRECTIONS[text];
+					state = EXIT_DESCRIPTION;
+				}
+
+				break;
+
+			case EXIT_DESCRIPTION:
+				exit.description.push(text);
+
+				if (text.slice(-1) === "~") {
+					state = EXIT_NAME;
+				}
+
+				break;
+
+			case EXIT_NAME:
+				exit.name.push(text);
+
+				if (text.slice(-1) === "~") {
+					state = EXIT_FLAGS;
+				}
+
+				break;
+
+			// TODO: parse exit flags
+			case EXIT_FLAGS:
+				if (!/^\d+(?: \d+)*$/.test(text)) {
+					throw new SyntaxError("Invalid exit flags");
+				}
+
+				exit.flags = text.split(" ").map(Number);
+				room.exits.push(exit.toJSON());
+				state = EXIT_DIRECTION;
+
+				break;
+
+			case FILE_END:
+				break;
+
+			// Unreachable
+			// istanbul ignore next
+			default:
+				throw new SyntaxError(`Invalid state (${state})`);
+		}
+	}
+
+	function consumeNextLineWrapper(err, x = {}, push, next) {
+		const { text, line } = x;
 
 		// Pass along errors
 		if (err) {
@@ -48,7 +171,10 @@ export default function WorldParser() {
 		// End of stream
 		if (x === highland.nil) {
 			if (state !== INITIAL && state !== FILE_END) {
-				push(new SyntaxError("Unexpected end of stream"));
+				push(Object.assign(
+					new SyntaxError("Unexpected end of stream"),
+					{ line }
+				));
 			}
 
 			push(null, x);
@@ -56,155 +182,16 @@ export default function WorldParser() {
 			return;
 		}
 
-		if (text === "$~") {
-			if (state <= TITLE) {
-				state = FILE_END;
-			} else {
-				push(new SyntaxError(`Invalid end of file marker on line ${line}`));
-				next();
-
-				return;
-			}
+		if (state === EXIT_DIRECTION && text === "S") {
+			push(null, room.toJSON());
 		}
 
-		switch (state) {
-			case INITIAL:
-				if (text) {
-					state = NUMBER;
-					consumeNextLine(err, x, push, next);
-				} else {
-					next();
-				}
-
-				break;
-
-			case NUMBER:
-				room = new Room();
-
-				if (/^#[0-9]+\s*$/.test(text)) {
-					room.number = parseInt(text.slice(1), 10);
-					state = TITLE;
-				} else {
-					push(new SyntaxError(`Invalid room number on line ${line}`));
-				}
-
-				next();
-
-				break;
-			case TITLE:
-				room.title.push(text);
-
-				if (text.slice(-1) === "~") {
-					state = DESCRIPTION;
-				}
-
-				next();
-
-				break;
-
-			case DESCRIPTION:
-				room.description.push(text);
-
-				if (text.slice(-1) === "~") {
-					state = EXTRA_DESCRIPTION;
-				}
-
-				next();
-
-				break;
-
-			// TODO: Implement extra description parsing
-			case EXTRA_DESCRIPTION:
-				if (text[0] === "E") {
-					push(new SyntaxError(
-						`Extra description not implemented, see line ${line}`
-					));
-					next();
-				} else {
-					state = ROOM_FLAGS;
-					consumeNextLine(err, x, push, next);
-				}
-
-				break;
-
-			// TODO: Parse room flags
-			case ROOM_FLAGS:
-				if (/^\d+(?: \d+)*$/.test(text)) {
-					room.flags = text.split(" ").map(Number);
-					state = EXIT_DIRECTION;
-				} else {
-					push(new SyntaxError(`Invalid room flags on line ${line}`));
-				}
-
-				next();
-
-				break;
-
-			case EXIT_DIRECTION:
-				if (text === "S") {
-					state = INITIAL;
-					push(null, room.toJSON());
-					next();
-				} else {
-					exit = new Exit();
-
-					if (DIRECTIONS[text]) {
-						exit.direction = DIRECTIONS[text];
-						state = EXIT_DESCRIPTION;
-					} else {
-						push(new SyntaxError(`Invalid direction on line ${line}`));
-					}
-				}
-
-				next();
-
-				break;
-
-			case EXIT_DESCRIPTION:
-				exit.description.push(text);
-
-				if (text.slice(-1) === "~") {
-					state = EXIT_NAME;
-				}
-
-				next();
-
-				break;
-
-			case EXIT_NAME:
-				exit.name.push(text);
-
-				if (text.slice(-1) === "~") {
-					state = EXIT_FLAGS;
-				}
-
-				next();
-
-				break;
-
-			// TODO: parse exit flags
-			case EXIT_FLAGS:
-				if (/^\d+(?: \d+)*$/.test(text)) {
-					exit.flags = text.split(" ").map(Number);
-					room.exits.push(exit.toJSON());
-					state = EXIT_DIRECTION;
-				} else {
-					push(new SyntaxError(`Invalid exit flags on line ${line}`));
-				}
-
-				next();
-
-				break;
-
-			case FILE_END:
-				next();
-				break;
-
-			// Unreachable
-			// istanbul ignore next
-			default:
-				push(new SyntaxError(`Invalid state (${state}) on line ${line}`));
-				next();
+		try {
+			consumeNextLine(text);
+		} catch (e) {
+			push(Object.assign(e, { line }));
+		} finally {
+			next();
 		}
 	}
 
@@ -221,5 +208,5 @@ export default function WorldParser() {
 				return { line, text };
 			};
 		})())
-		.consume(consumeNextLine);
+		.consume(consumeNextLineWrapper);
 }
