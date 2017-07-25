@@ -1,0 +1,2185 @@
+#3800  
+The Courtyard Entrance~
+   This is the entrance to this small, fortified camp.  To the north stands a
+thick gate with a large lock built into it.  Tall, stone walls surround the
+courtyard here, which extends all around.  Atop the wall to the east and west
+are wooden watchtowers where guards scan the surrounding countryside watching
+for trouble.  The main part of this keep lies to the south, where a two-story
+building sits, a portcullis leading  into it.  Red and black banners atop the
+walls flap in the breeze and several soldiers wearing the same colors parade
+around and train for an eventual fight. 
+~
+0 4 1 0
+D0
+A large gate lies to the north
+~
+gate~
+321 7522 3819 0
+D1
+~
+~
+0 0 3868 0
+D2
+~
+~
+0 0 3867 0
+D3
+~
+~
+0 0 3869 0
+S
+#3801  
+The Old Forest Road~
+   This road seems to improve its condition as the big holes and bumps
+disappear. This road continues to the east and the west and is packed hard
+against the earth, as many a traveller has walked this way.
+~
+0 0 9 0
+D0
+~
+~
+0 0 3841 0
+D1
+~
+~
+0 0 3802 0
+D2
+~
+~
+0 0 3836 0
+D3
+~
+~
+0 0 7904 0
+S
+#3802  
+The Old Forest Road~
+   This narrow road is made from dirt. Many a traveller has walked these
+roads before as the dirt is hard and packed down into the earth. Wagon tracks
+are also visible on the road.
+~
+0 0 9
+D0
+~
+~
+0 0 3828 0
+D1
+~
+~
+0 0 3803 0
+D2
+~
+~
+0 0 3835 0
+D3
+~
+~
+0 0 3801 0
+S
+#3803  
+Bend in the Old Forest Road~
+   The road bends here but little else is different about it. An abandoned 
+farmhouse is to the east as if somebody actually tried to live here. A large
+shack is seen to the south-east.
+~
+0 0 9 0
+D0
+~
+~
+0 0 3804 0
+D1
+~
+door~
+1 0 3821 0
+D2
+~
+~
+0 0 3815 0
+D3
+~
+~
+0 0 3802 0
+S
+#3804  
+The Old Forest Road~
+   This dirt road is very bumpy and contains many holes. Many pieces of wagons
+lay strewn about as they have succumbed to the weariness of travel. Bones of
+some animal are half-buried in the dirt, as somebody had dinner but didn't
+bury the bones.
+~
+0 0 9
+D0
+~
+~
+0 0 3805 0
+D1
+~
+~
+0 0 3827 0
+D2
+~
+~
+0 0 3803 0
+D3
+~
+~
+0 0 3828 0
+S
+#3805  
+The Old Forest Road~
+   The old forest road bends here heading to the south. To the west is a small
+field which has grown up right by the road.. Lots of small animals and birds
+chirp and cry out in the fields.
+~
+0 0 9
+D1
+~
+~
+0 0 3806 0
+D2
+~
+~
+0 0 3804 0
+D3
+~
+~
+0 0 3829 0
+S
+#3806  
+The Old Forest Road~
+   This old road has been well traveled in the past, and continues to be used
+greatly today. This road continues to the east and west.
+~
+0 0 9
+D1
+~
+~
+0 0 3807 0
+D2
+~
+~
+0 0 3827 0
+D3
+~
+~
+0 0 3805 0
+S
+#3807  
+The Old Forest Road~
+   Traveling this well-used road, enjoying the scenery of holes and large
+bumps. The road continues to the east and the west.
+~
+0 0 9 0
+D1
+~
+~
+0 0 3808 0
+D2
+~
+~
+0 0 3826 0
+D3
+~
+~
+0 0 3806 0
+S
+#3808  
+The Old Forest Road~
+   Birds and other small animals chirp and cry merrilily. Wagon tracks are seen
+on the road as many a traveller has passed through this road. The road
+seems to narrow up ahead.
+~
+0 0 9
+D1
+~
+~
+0 0 3809 0
+D2
+~
+~
+0 0 3825 0
+D3
+~
+~
+0 0 3807 0
+S
+#3809  
+Bend in the Old Forest Road~
+   This road is made of dirt and gravel. It contains many bumps and holes as
+nature pounds it with it's fury every once in a while. Avoiding the bumps and
+holes is very hard since the whole road has them in it.
+~
+0 0 9
+D1
+~
+~
+0 0 3820 0
+D2
+~
+~
+0 0 3810 0
+D3
+~
+~
+0 0 3808 0
+S
+#3810  
+The Old Forest Road~
+   This road takes you to the north or the east. Many pieces of wood lay about
+as the people who made this road, just cut the trees down as fast as they could
+without taking the wood with them.
+~
+0 0 9
+D0
+~
+~
+0 0 3809 0
+D1
+~
+~
+0 0 3811 0
+D2
+~
+~
+0 0 3850 0
+D3
+~
+~
+0 0 3825 0
+S
+#3811  
+Bend in the Old Forest Road~
+   Here and there you can see splintered wagon wheels as they have been 
+shattered by some of the larger bumps and rocks in this road, as this road
+is very primitive. As this road bends a large tree has fallen to the north.
+~
+0 0 9 0
+D0
+~
+~
+0 0 3820 0
+D1
+~
+~
+0 0 3831 0
+D2
+~
+~
+0 0 3812 0
+D3
+~
+~
+0 0 3810 0
+S
+#3812  
+Bend in the Old Forest Road~
+   This dirt and gravel road is worn well, many feet have trod where yours are
+now. It is wide enough to contain 8 man abreast without any of them going off
+the road. To the north the road continues.
+~
+0 0 9
+D0
+~
+~
+0 0 3811 0
+D1
+~
+~
+0 0 3813 0
+D2
+~
+~
+0 0 3852 0
+D3
+~
+~
+0 0 3850 0
+S
+#3813  
+The Old Forest Road~
+   This old road is heavily traveled. It continues to the east and west. 
+Wagon tracks can be seen on the road as many a merchant has traveled around
+trying to sell his goods.
+~
+0 0 9
+D0
+~
+~
+0 0 3831 0
+D1
+~
+~
+0 0 3814 0
+D2
+~
+~
+0 0 3853 0
+D3
+~
+~
+0 0 3812 0
+S
+#3814  
+The Old Forest Road~
+   You are on an old dirt and gravel road that has been made by countless
+people travelling down it. Many have not reached their destination as
+bones of people lay near the road.
+~
+0 0 9 0
+D0
+~
+~
+0 0 3832 0
+D1
+~
+~
+0 0 5903 0
+D2
+~
+~
+0 0 3854 0
+D3
+~
+~
+0 0 3813 0
+S
+#3815  
+Hilly Plains~
+   A small path leads off from the Old Forest Road as many a traveller has
+camped here for the night. Small and gentle rolling hills cover the area.
+Small rabbits eat the green grass that grows.
+~
+0 0 4 0
+D0
+~
+~
+0 0 3803 0
+D2
+~
+~
+0 0 3859 0
+D3
+~
+~
+0 0 3835 0
+S
+#3816  
+A Large Shack~
+   This shack seems to have been abandoned the same time that the farmhouse was.
+It is in better condition than the farmhouse as more care has been put into
+the shack than the farmhouse. The person who lived in the farmhouse probably
+kept his valuables in here.
+~
+0 9 0 0
+D0
+~
+~
+0 0 3821 0
+S
+#3817  
+Plains~
+   A well beaten path leads to the west where a large shack is seen. Somebody
+must have lived around here for awhile and made this path. Small animals dart
+to and fro.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3823 0
+D1
+~
+~
+0 0 3857 0
+D2
+~
+~
+0 0 3818 0
+S
+#3818  
+Plains~
+   Finding your way through these plains is hard. Everywhere you look
+plains surround you. Trusting in your mind to be able to find the way back
+you continue.
+~
+0 0 2
+D0
+~
+~
+0 0 3817 0
+D1
+~
+~
+0 0 3819 0
+D3
+~
+~
+0 0 3860 0
+S
+#3819  
+Gate to the Encampment~
+   A large thick gate lies to the south, protecting something you can not see.
+You wonder who would build a powerful gate in such a deserted area. The gate is
+made out of some of the strongest metal you have ever seen and it looks brand new.
+
+
+~
+0 0 9 0
+D0
+~
+~
+0 0 3857 0
+D1
+~
+~
+0 0 3861 0
+D2
+A huge, thick gate lies to the south.
+~
+gate~
+321 7522 3800 0
+D3
+~
+~
+0 0 3818 0
+S
+#3820  
+At a Large Fallen Tree~
+   There is a large tree lying here.  Part of its roots have been tore up
+with it when it fell over many years ago.  Much of the area around this tree
+is clear with a few large rocks here and there.  You see some footprints in
+some of the dirt around you.
+~
+0 0 3
+D1
+~
+~
+0 0 3834 0
+D2
+~
+~
+0 0 3811 0
+D3
+~
+~
+0 0 3809 0
+D5
+Thick tree roots cover the ground.
+~
+roots~
+769 0 3822 0
+S
+#3821  
+Abandoned Farmhouse~
+   A door creaks loudly open as you approach. The house is about ready to 
+collapse upon itself. The windows are all broken and there is no sign of any
+furniture or clothes. The roof is going to cave into the house any minute.
+~
+0 9 0 0
+D2
+~
+~
+0 0 3816 0
+D3
+~
+door~
+1 0 3803 0
+S
+#3822  
+Tree Tunnel~
+   You are in a tunnel that has been carved into this large fallen tree. The
+walkway is covered in woodchips and the surrounding wood is in good condition
+with no bugs or termites in it.  The tunnel leads down a short stairway to the
+east.
+~
+0 9 0 0
+D1
+~
+~
+0 0 3839 0
+D4
+~
+roots~
+521 0 3820 0
+S
+#3823  
+Plains~
+   A small waterhole is located to the east, which surely draws all the animals
+to it. To the west is an abandoned farmhouse, as if somebody actually tried to 
+live here but failed miserably.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3826 0
+D1
+~
+~
+0 0 3824 0
+D2
+~
+~
+0 0 3817 0
+S
+#3824  
+Small Waterhole~
+   A small pool of water lies here. It must be feed from an underground spring
+because it never rains here. Many animals crowd around here to get a drink
+of precious water.
+~
+0 4096 2
+D0
+~
+~
+0 0 3825 0
+D1
+~
+~
+0 0 3850 0
+D2
+~
+~
+0 0 3857 0
+D3
+~
+~
+0 0 3823 0
+S
+#3825  
+Plains~
+   A dry and deserted plains stretch far. Small animals run about here and 
+there. A small waterhole is to the south and it looks like the only place
+to drink around here.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3808 0
+D1
+~
+~
+0 0 3810 0
+D2
+~
+~
+0 0 3824 0
+D3
+~
+~
+0 0 3826 0
+S
+#3826  
+Plains~
+   Looking about for some sign of activity or life hardly anything is seen.
+Wondering if anything could survive here for a period time and knowing that
+it is false. The sky is directly overhead, nothing is in the way.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3807 0
+D1
+~
+~
+0 0 3825 0
+D2
+~
+~
+0 0 3823 0
+D3
+~
+~
+0 0 3827 0
+S
+#3827  
+Plains~
+   Many animals wander these plains, to them it is there home. To the south
+an old looking farmhouse rises above all else. The wildlife of the plains
+areuniformly thin and tough to survive little food and water in the summer and
+mind-bending cold in the winter.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3806 0
+D1
+~
+~
+0 0 3826 0
+D3
+~
+~
+0 0 3804 0
+S
+#3828  
+Rolling Grasslands~
+   Small hills dot the landscape as the grasslands roll onward. Large paths
+lay beaten into the dirt as people from all over travel these lands. Smoke
+plumes from the plain to the north-east and you wonder what could live there. 
+~
+0 0 2 0
+D0
+~
+~
+0 0 3829 0
+D1
+~
+~
+0 0 3804 0
+D2
+~
+~
+0 0 3802 0
+D3
+~
+~
+0 0 3841 0
+S
+#3829  
+Rolling Grasslands~
+   Hills go up and go down, in this ever changing landscape. To the east
+the Old Forest Road lies. Small tracks of animals run around. Beaten paths
+are seen as many a traveller has walked these routes.
+~
+0 0 2 0
+D1
+~
+~
+0 0 3805 0
+D2
+~
+~
+0 0 3828 0
+D3
+~
+~
+0 0 3842 0
+S
+#3830  
+Death's Lake~
+   Two large rocks protrude in the middle of this lake, forming the two eye
+sockets of a rough skull, which is how this lake acquired its name. Cool,
+rippling  waters entice many an animal to swim or drink its bountiful water.
+This lake is big and one may have to use a boat to get across it. 
+~
+0 4096 7 0
+D0
+~
+~
+0 0 3856 0
+D1
+~
+~
+0 0 5967 0
+D2
+~
+~
+0 0 3840 0
+D3
+~
+~
+0 0 3858 0
+S
+#3831  
+The Grasslands~
+   Small animals run around in this wild grasslands. Huge grass grows 
+everywhere as weeds fight for survival. To the south and west the Old Forest
+Road runs.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3834 0
+D1
+~
+~
+0 0 3832 0
+D2
+~
+~
+0 0 3813 0
+D3
+~
+~
+0 0 3811 0
+S
+#3832  
+The Grasslands~
+   Large amounts of grass, feed off the small pond to the north. The grass  is
+about 4 feet tall with small thorns at the end. To the south is the Old Forest
+Road. The ground is soft here and is pleasant to walk on, making the weary
+traveler wish to lay down for a break from their travels. 
+~
+0 0 2 0
+D0
+~
+~
+0 0 3833 0
+D1
+~
+~
+0 0 5904 0
+D2
+~
+~
+0 0 3814 0
+D3
+~
+~
+0 0 3831 0
+S
+#3833  
+A Pond~
+   This small pond feeds the trees that are around it. The animals drink here
+and so they stick around. Small fish are seen swimming lazily throughout the
+small pond. It is only 6 feet deep in the center.
+~
+0 4096 2 0
+D1
+~
+~
+0 0 5905 0
+D2
+~
+~
+0 0 3832 0
+D3
+~
+~
+0 0 3834 0
+S
+#3834  
+The Grasslands~
+   Small animals run through this wild grassland to reach the small pond to
+the east. To the west there is a large fallen tree. The heavy winds blow
+the tops of the grass back and forth in a never ending cycle. Small paths
+snake their wa between the grass have grown as many a people have traveled these
+wonderful grasslands.
+~
+0 0 2 0
+D1
+~
+~
+0 0 3833 0
+D2
+~
+~
+0 0 3831 0
+D3
+~
+~
+0 0 3820 0
+S
+#3835  
+Endless Plains~
+   Dust flies up from underneath your feet as you're the first person to walk
+these plains in a while. Plains wolves and other small animals built to
+survive given little populate the plains as this is perfect environment for them.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3802 0
+D1
+~
+~
+0 0 3815 0
+D2
+~
+~
+0 0 3838 0
+D3
+~
+~
+0 0 3836 0
+S
+#3836  
+Endless Plains~
+   Here stunted crops grow uselessly. Someone tried to farm here but finally
+learned that it was useless to grow things in this arid place. Dust flies
+up in the air where you are stepping.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3801 0
+D1
+~
+~
+0 0 3835 0
+D2
+~
+~
+0 0 3837 0
+D3
+~
+~
+0 0 7932 0
+S
+#3837  
+Plains~
+   Nothing lives here, no vegetation and no animals. Walking through
+these quiet grasses, the only sounds heard are footsteps and armour jiggling. It
+is still and deathly quiet. Far to the north the Old Forest Road can be seen.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3836 0
+D1
+~
+~
+0 0 3838 0
+D2
+~
+~
+0 0 3871 0
+D3
+~
+~
+0 0 7933 0
+S
+#3838  
+Plains~
+   Small grass actually grows here, feeding off the pond. The pond is formed
+by the water that slides down the large hill to the east. Far to the north
+the Old Forest Road can be seen. The usually flat plain gets hilly here, gaining
+elevation from long past movements of the earth.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3835 0
+D1
+~
+~
+0 0 3859 0
+D2
+~
+~
+0 0 3864 0
+D3
+~
+~
+0 0 3837 0
+S
+#3839  
+A Small Hideout~
+   There is a small area dug out here.  The walls, ceiling, and floor have
+been covered by stone to make things more stable.  There is a table here and
+a few chairs.  On the ground are scraps of cloth and garbage.  This must be
+a small meeting place for some people who wanted to keep it secret.
+~
+0 9 2
+D3
+~
+~
+0 0 3822 0
+S
+#3840  
+Light Forest~
+   The winds from the lake head into the forest where it eventually dies.
+Death's Lake to the north feeds this whole forest with water, which allows
+it to grow in this usually barren landscape. Small and large animals call this
+forest home.
+~
+0 0 3
+D0
+~
+~
+0 0 3830 0
+D2
+~
+~
+0 0 3843 0
+D3
+~
+~
+0 0 3848 0
+S
+#3841  
+Rolling Grasslands~
+   The grasslands continue but are dotted with large and small hills. To the 
+south the Old Forest Road is found. But to the north a strange looking tent
+with a small fire lies.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3842 0
+D1
+~
+~
+0 0 3828 0
+D2
+~
+~
+0 0 3801 0
+D3
+~
+~
+0 0 7921 0
+S
+#3842  
+Grasslands~
+  The grass continues as far as the eye can see, blowing in the wind like a
+gaint sea, waves of green flowing up and down.  There are signs of a small
+camp that had been set up here in the past, including a small still-burning
+fire.
+~
+0 0 2 0
+D1
+~
+~
+0 0 3829 0
+D2
+~
+~
+0 0 3841 0
+D3
+~
+~
+0 0 7922 0
+S
+#3843  
+Light Forest~
+   Large animals hide under the cover of the trees. To the far north is 
+Death's Lake which feeds this rapidly growing forest. Some trees have been cut
+down to make a wall that you can see from here.
+~
+0 0 3
+D0
+~
+~
+0 0 3840 0
+D3
+~
+~
+0 0 3845 0
+S
+#3844  
+Dirty Street~
+   This small road winds it's way through this small village. It is made
+out of dirt but the falling rains have made it mud. As people walk in it
+they track mud everywhere but they don't seem to mind.
+~
+0 0 1
+D0
+~
+~
+0 0 3873 0
+D1
+~
+~
+0 0 3846 0
+D2
+~
+~
+0 0 3849 0
+D3
+~
+~
+0 0 3880 0
+S
+#3845  
+Light Forest~
+   Trees seem to have been cut down here, with many stumps laying about.
+To the west, you can see why, a huge wooden wall stops you from going in that
+direction. Many trees still grow here even though about half of them were
+cut down.
+~
+0 0 3
+D0
+~
+~
+0 0 3848 0
+D1
+~
+~
+0 0 3843 0
+S
+#3846  
+A Dirt Street~
+   To the north and south houses stretch in a straight line, totaling about
+fourteen. Many of the houses are abandoned and some are completely ruined. To
+the dismay of many people the guards patrol right by their house. 
+~
+0 0 1 0
+D0
+~
+~
+0 0 3872 0
+D2
+~
+~
+0 0 3847 0
+D3
+~
+~
+0 0 3844 0
+S
+#3847  
+A Dirt Street~
+   Row after row of houses stretch to the north. Patrols continuosly walk
+down the streets protecting the citizens from anything and everything. To the 
+west a small dirt street lies.
+~
+0 0 1 0
+D0
+~
+~
+0 0 3846 0
+D3
+~
+~
+0 0 3849 0
+S
+#3848  
+Light Forest~
+   Trees grow here, with help from the bountiful supply of water from
+the lake nearby. The trees provide cover from they sky, and hide small animals
+from the predators that lurk nearby.
+~
+0 0 3
+D0
+~
+~
+0 0 3858 0
+D1
+~
+~
+0 0 3840 0
+D2
+~
+~
+0 0 3845 0
+S
+#3849  
+Dirt Street~
+   A small narrow dirt street feeds itself through this small town. Wagons 
+and carts get stuck, as the mud grabs ahold and will not let go. Many people
+walk these streets which cause them to become dirty and muddy.
+~
+0 0 1 0
+D0
+~
+~
+0 0 3844 0
+D1
+~
+~
+0 0 3847 0
+D2
+~
+corral~
+1 0 3885 0
+S
+#3850  
+Plains~
+   To the north and east the Old Forest Road lies. But to the west a small 
+waterhole that is visited by many animals is there. The heat is unbearable
+in this killer plains. Breathing is like inhaling dust, the air is so dry.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3810 0
+D1
+~
+~
+0 0 3812 0
+D3
+~
+~
+0 0 3824 0
+S
+#3851  
+Small Hut~
+   This small hut is in the middle of nowhere. Somebody actually tried to live
+in this deserted place, but found that this place is uninhabitable. Cracked 
+wooden boards lay forgotten nearby, never to be used again. Rusted weapons and
+tools lay scattered about, as the owner seem to have forgotten them.
+~
+0 9 2 0
+D1
+~
+~
+0 0 3852 0
+S
+#3852  
+Plains~
+   Wide open land lays around. Nobody ever seems to disturb this peacefulness 
+and the small animals that live here only look for food and drink. To the north
+the Old Forest Road bends.
+~
+0 0 2
+D0
+~
+~
+0 0 3812 0
+D1
+~
+~
+0 0 3853 0
+D2
+~
+~
+0 0 3862 0
+D3
+~
+~
+0 0 3851 0
+S
+#3853  
+Plains~
+   Occasionally small plants grow but not a lot. The soil is getting richer
+the more east you get but still not allowing more than small shrubs to grow.
+Farther to the east trees are seen. To the north the Old Forest Road lies.
+~
+0 0 2
+D0
+~
+~
+0 0 3813 0
+D1
+~
+~
+0 0 3854 0
+D2
+~
+~
+0 0 3855 0
+D3
+~
+~
+0 0 3852 0
+S
+#3854  
+Prairie~
+   Small trees try to grow here but the soil will not let them. Mostly small
+bushes and scrub plants grow here. Small animals can be seen eating the
+leaves of them. To the north the Old Forest Road lies.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3814 0
+D1
+A large tower rises to the east.
+~
+~
+0 0 5961 0
+D2
+~
+~
+0 0 3856 0
+D3
+~
+~
+0 0 3853 0
+S
+#3855  
+Plains~
+   Small animals hurry to get out of they way, as they are frightened to death
+by seeing you. Small grass grow nearby as water seems to become more available,
+as you can see a large lake to the south-east.
+~
+0 0 2
+D0
+~
+~
+0 0 3853 0
+D1
+~
+~
+0 0 3856 0
+D2
+~
+~
+0 0 3858 0
+D3
+~
+~
+0 0 3862 0
+S
+#3856  
+Prairie Outside a Tower~
+   Large bushes and medium sized trees grow in this small prairie.
+Sounds of running water are heard to the south, which allows the slight growth
+of the vegetation. Looking to the west all that can be seen are dry and deserted
+plains.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3854 0
+D1
+~
+~
+0 0 5964 0
+D2
+~
+~
+0 0 3830 0
+D3
+~
+~
+0 0 3855 0
+S
+#3857  
+Plains~
+   Animal footprints cover the ground. Entering territory that has never been
+disturbed by a human before. Large tracks lead to the south while most of them
+are little footprints like foxes and wolves.
+~
+0 0 2 0
+D0
+~
+~
+0 0 3824 0
+D2
+~
+~
+0 0 3819 0
+D3
+~
+~
+0 0 3817 0
+S
+#3858  
+Plains~
+   Large vegetation grow here as they feed off Death's Lake. To the south
+a small forest has grown up over the years. Here small animals feed off
+the vegetation and drink the water equally, and they equally run from the
+occasional predator that comes hunting.
+~
+0 0 2
+D0
+~
+~
+0 0 3855 0
+D1
+~
+~
+0 0 3830 0
+D2
+~
+~
+0 0 3848 0
+S
+#3859  
+A Large Hill~
+   This hill is exhausting to climb as the grade is steep. All the rain that 
+falls slides down the hill onto the lands below creating small ponds. Several 
+goats and animals that like high places can be seen wandering around here.
+~
+0 0 4
+D0
+~
+~
+0 0 3815 0
+D1
+~
+~
+0 0 3860 0
+D2
+~
+~
+0 0 3863 0
+D3
+~
+~
+0 0 3838 0
+S
+#3860  
+Plains~
+   A large hill stands out to the west. A semi-small pond is here because
+all the water slides down the hill onto here. Small animals can be seen 
+drinking out of the pond, relieving their thirst. To the south a strange
+wooden wall is seen blocking that direction off.
+~
+0 0 2 0
+D1
+~
+~
+0 0 3818 0
+D3
+~
+~
+0 0 3859 0
+S
+#3861  
+Plains~
+   Small bushes dot the landscape and small animals creep through them.
+The animals chirp with fright and flee from the sight of you. To the 
+south lies a huge wooden wall, which you can not climb over.
+~
+0 0 2 0
+D1
+~
+~
+0 0 3862 0
+D3
+~
+~
+0 0 3819 0
+S
+#3862  
+Plains~
+   Nothing is alive here. All the vegetation is brown and small animal's 
+corpses lay on the ground. To the south a strange looking wooden wall prevents
+you from going in that direction.
+~
+0 0 2
+D0
+~
+~
+0 0 3852 0
+D1
+~
+~
+0 0 3855 0
+D3
+~
+~
+0 0 3861 0
+S
+#3863  
+Field~
+   Large fields of food grow around here, enough to feed a entire village.
+Small irrigation canals feed the plants with water. The water is coming from
+the south-west. To the east a large wooden wall looms overhead.
+~
+0 4096 2 0
+D0
+~
+~
+0 0 3859 0
+D2
+~
+~
+0 0 3865 0
+D3
+~
+~
+0 0 3864 0
+S
+#3864  
+Fields~
+   Workers hoe and chop at the soil in an attempt to loosen it up, to allow
+the planting of plants. To the south a large pond has many small irrigation
+canals going all over the place, to feed the surrounding fields with water.
+~
+0 4096 2 0
+D0
+~
+~
+0 0 3838 0
+D1
+~
+~
+0 0 3863 0
+D3
+~
+~
+0 0 3871 0
+S
+#3865  
+Fields~
+   Farmers toil away, planting and harvesting a lot of food. Workers can be
+seen taking the food to the east and into a large encampment. Irrigation canals
+feed the fields with precious water. A large wooden wall lies to the east which
+blocks off that direction.
+~
+0 4096 2 0
+D0
+~
+~
+0 0 3863 0
+D2
+~
+~
+0 0 3866 0
+S
+#3866  
+Fields~
+   Fields of plants bend here and there as the wind knocks them around. Farmers
+toil away, creating the precious substance known as food. Large irrigation
+canals feed their way through the many fields as it gives water to the plants.
+A large wooden wall blocks off the way to the east.
+~
+0 4096 2 0
+D0
+~
+~
+0 0 3865 0
+S
+#3867  
+The Fountain~
+   A large fountain sits here within the courtyard, water flowing freely from
+it into a large basin.  It is here that the residents of this keep draw their
+water from.   To the south looms a tall stone structure, a windowless
+two-story building.  An iron portcullis is the only visible entrance, a small
+open-air entryway visible upon the other side of it.  The courtyard spreads
+out to the north where a large gate leads outside the keep. 
+~
+0 4096 1 0
+D0
+~
+~
+0 0 3800 0
+D1
+~
+~
+0 0 3872 0
+D2
+~
+portcullis~
+65 0 3875 0
+D3
+~
+~
+0 0 3870 0
+S
+#3868  
+The Courtyard~
+   A wide courtyard fills much of the area inside these stone walls.  Large
+slabs of grey slate have been layed down upon the ground, providing a smooth
+surface to walk on devoid of mud during times of rain.  The front gate can be
+seen to the west, while above sits a wooden structure perched atop the walls. 
+~
+0 0 1 0
+D2
+~
+~
+0 0 3872 0
+D3
+~
+~
+0 0 3800 0
+D4
+~
+trapdoor~
+1 0 3873 0
+S
+#3869  
+The Courtyard~
+   The tall, stone walls of the keep meet here in the northeast corner of the
+camp.  A wooden watchtower sits atop the walls above here, where a guard
+stands watching for intruders or attackers.  Several soldiers walk around the
+courtyard to the south and east, training with one another and discussing
+various topics. 
+~
+0 0 1 0
+D1
+~
+~
+0 0 3800 0
+D2
+~
+~
+0 0 3870 0
+D4
+~
+trapdoor~
+1 0 3874 0
+S
+#3870  
+The Courtyard~
+   A tall stone wall lies to the west butting up against a building to the
+south.  The remainder of this courtyard stretches to the north and east,
+covered by slabs of  slate.  A fountain sprays water into the air east of here
+and several soldiers can be seen patroling the area.  Wooden watchtowers sit
+atop the walls to the north and  northeast. 
+~
+0 0 1 0
+D0
+~
+~
+0 0 3869 0
+D1
+~
+~
+0 0 3867 0
+S
+#3871  
+Fields~
+   Large fields of crops lay in ruin, as the irrigation canals failed to work.
+The water didn't come as expected and this field was abandoned to the carrion as
+other fields produced bountiful crops..
+~
+0 4096 2 0
+D0
+~
+~
+0 0 3837 0
+D1
+~
+~
+0 0 3864 0
+D3
+~
+~
+0 0 7934 0
+S
+#3872  
+The Courtyard~
+   A stone wall rises high to the east, where red and black banners flap in
+the breeze.  To the south, a tall building made of the same material as the
+walls looms above the courtyard.  No windows can be seen within it, only a
+portcullis to the west allows entrance inside.  A stone fountain sits in the
+middle of the courtyard before the portcullis. 
+~
+0 0 1 0
+D0
+~
+~
+0 0 3868 0
+D3
+~
+~
+0 0 3867 0
+S
+#3873  
+The Watchtower~
+   Sitting atop the stone walls of the keep, this structure is a watchtower
+meant to house a guard that scans the distances looking for possible trouble.
+A large courtyard lies below, surfaced with a grey slate.  A two-story
+building sits to the south of the courtyard, a portcullis leading into it.
+Several soldiers wearing the colors of Thog Bloodsbane, black on red, patrol
+the courtyard. 
+~
+0 16 0 0
+D0
+~
+~
+16384 0 3819 0
+D1
+~
+~
+16384 0 3858 0
+D2
+~
+~
+16384 0 3867 0
+D3
+~
+~
+16384 0 3800 0
+D5
+~
+trapdoor~
+1 0 3868 0
+S
+#3874  
+The Watchtower~
+   Within this wooden structure, a guard is posted to watch the surrounding
+countyside for possible threats.  A vast, grassy plain stretches out in all
+directions away from the keep.  A thin forest of trees can be seen in the
+distance.  Anyone approaching  will be seen long before they reach the front
+gate and the camp's inhabitants can be warned. 
+~
+0 16 0 0
+D0
+~
+~
+16384 0 3819 0
+D1
+~
+~
+16384 0 3800 0
+D2
+~
+~
+16384 0 3867 0
+D3
+~
+~
+16384 0 3863 0
+D5
+~
+trapdoor~
+1 0 3869 0
+S
+#3875  
+Open Entryway~
+   This open-air entryway is the entrance to the main portion of Thog's keep.
+It is floored with the same slate rock as the courtyard to the north, which
+lies on the other side of an iron portcullis.  A corral leads to the stables
+south of here,  while doors to the east and west lead into the main building.
+
+~
+0 0 0 0
+D0
+~
+portcullis~
+65 0 3867 0
+D1
+~
+steeldoor~
+1 0 3876 0
+D2
+~
+corral~
+1 0 3879 0
+D3
+~
+woodendoor~
+1 0 3877 0
+S
+#3876  
+The Armory~
+   This is the keep's armory, where extra weapons are stored for emergencies.
+Because of the small size of this encampment, it also is used as a smithy
+where the weapons are made.  Metal armor is also made and stored here, so that
+this place is very  important to Thog and his men.  To protect their
+equipment, a steeldoor has been placed to the west.  To the south, a doorway
+leads to a flight of stairs.  
+~
+0 8 0 0
+D2
+~
+door~
+1 0 3880 0
+D3
+~
+steeldoor~
+1 0 3875 0
+S
+#3877  
+Dining Hall~
+   A long oaken table takes up most of this room, its surface unfinished and
+rough. Years of spilled food and drink stain the surface in large patches.
+Several crude chairs surround it, some tipped over on the floor.  Wooden
+plates and goblets sit on the table, filled with uneaten food and drink.  A
+large cast-iron stove sits in the northwest corner, a pipe leading from it
+through the ceiling.  
+~
+0 8 0 0
+D1
+~
+woodendoor~
+1 0 3875 0
+D2
+~
+door~
+1 0 3878 0
+S
+#3878  
+Barracks~
+   The walls of this room are lined with several double bunks, each bed facing
+the opposite direction of the next.  Footlockers lie upon the floor at the end
+of each bunk, filled only with spare clothing.  No windows sit in the walls
+and the only exit is the door to the north.  
+~
+0 8 0 0
+D0
+~
+door~
+1 0 3877 0
+S
+#3879  
+The Stable~
+   Dirty straw and hay lies scattered throughout the several stalls here. Each
+houses a horse used by the soldiers here when travelling from the keep. Water
+troughs and feed trays line the inside of the stalls and a block of salt rests
+on the floor.  Tack and harnesses hang from pegs on the walls.  
+~
+0 8 0 0
+D0
+~
+corral~
+1 0 3875 0
+S
+#3880  
+The Stairwell~
+   A curved flight of stone stairs leads upwards here as well as down below
+the main keep.  Brass sconces line the walls, filled with unlit torches.  A
+wooden door leads northward to the keep's armory, where weapons and armor are
+stored until needed at a later time.  The absence of dust on the floor shows
+that these stairs are used often by the inhabitants of this place.   
+~
+0 12 0 0
+D0
+~
+~
+0 0 3876 0
+D4
+~
+~
+0 0 3887 0
+D5
+~
+~
+0 0 3881 0
+S
+#3881  
+The Dungeon~
+   A circular flight of stairs leads upward into the main part of the keep,
+its steps built of blocks of grey stone.  This is Thog's dungeon, where he
+keeps those he finds wandering too close to his camp.  Two cells can be seen
+here, one to the west and the other to the northwest.  A terrible stench fills
+the room.  
+~
+0 9 0 0
+D0
+~
+~
+0 0 3882 0
+D3
+~
+celldoor~
+353 7523 3884 0
+D4
+~
+~
+0 0 3880 0
+S
+#3882  
+The Jailor's Corner~
+   This corner of the dungeon contains a small table and a chair.  Various
+implements of torture hang from the walls on wooden pegs, blood staining their
+surfaces.  A flight of stairs leads upward into the ceiling to the north and
+two cells can be seen to the west and southwest.  
+~
+0 8 0 0
+D2
+~
+~
+0 0 3881 0
+D3
+~
+celldoor~
+353 7523 3883 0
+S
+#3883  
+A Prison Cell~
+   This cell appears to have been used recently.  Fresh blood pools in a dark
+patch in the center of the room.  Dirty straw covers the floor, mixed with
+excrement and rotten food.  A few words have been scrawled into the stone
+walls, though their meaning is uncertain.  An iron cell door leads to the
+west.  
+~
+0 9 0 0
+D1
+~
+celldoor~
+353 7523 3882 0
+S
+#3884  
+A Prison Cell~
+   This small cell is covered with a thin layer of dirty straw, blood and
+excrement staining the floor in large patches.  Rats scurry into a small hole
+in the floor at the sign of visitors here.  A terrible odor fills one's
+nostrils, one of rot and decay.  An iron cell door to the east is the only
+exit out of here.  
+~
+0 9 0 0
+D1
+~
+celldoor~
+353 7523 3881 0
+S
+#3885  
+A Short Hallway~
+   Turning to the south and east, this short passage winds its way through the
+upper stories of the keep.  A door stands to the west, voices coming from
+behind it. Another door can be seen to the south along the same wall.  Various
+footprints can be seen in the thin layer of dust on the floor.   
+~
+0 9 0 0
+D1
+~
+door~
+1 0 3886 0
+D2
+~
+~
+0 0 3889 0
+D3
+~
+heavydoor~
+65 1102 3888 0
+S
+#3886  
+A Short Hallway~
+   This small passage leads to the west where it rounds a corner and a door
+can be  seen, and to the south where a flight of stairs leads downward.  Unlit
+torches sit in sconces on the walls, covered in a thin layer of dust.  Voices
+can be heard around the corner to the west.  
+~
+0 8 0 0
+D2
+~
+~
+0 0 3887 0
+D3
+~
+door~
+1 0 3885 0
+S
+#3887  
+Atop the Stairwell~
+   A circular flight of stairs leads downward here, its stone steps devoid of
+dust. This implies that it is used often by the inhabitants of the keep.
+Sconces hang on the walls, unlit torches sitting within.  A doorway leads to
+the north, where sounds of talking can be heard emanating from.  
+~
+0 8 0 0
+D0
+~
+~
+0 0 3886 0
+D5
+~
+~
+0 0 3880 0
+S
+#3888  
+The Map Room~
+   Several wooden tables sit in this room.  Various maps of the plains
+surrounding the keep, Vinyanost, and the Mirkwood lie scattered across these
+tables and hang on the walls.  Tiny metal pieces mark locations key to Thog's
+plans.  A plate of uneaten food and a half-filled goblet sit near a
+well-marked map of Vinyanost.  
+~
+0 8 0 0
+D1
+~
+heavydoor~
+65 1102 3885 0
+S
+#3889  
+A Short Hallway~
+   The passage ends here, where a well-built door stands in the western wall.
+The  hinges on the door appear amply oiled and the floor is devoid of dust,
+indicating that this room is used often.  Sconces on the wall contain unlit
+torches and a large painting of the renegade leader, Thog Bloodsbane, hangs on
+the eastern wall across from the door.  
+~
+0 8 0 0
+D0
+~
+~
+0 0 3885 0
+D3
+~
+oakdoor~
+353 7524 3890 0
+S
+#3890  
+Thog's Chambers~
+   This room is quite large and extravagently decorated.  A wide, four-poster
+bed sits against the western wall, covered in dark red silk sheets. Tapestries
+hang on the  walls, woven with golden thread and studded with rare gems.  A
+circular table carved from a rich, dark wood sits in the middle of the room,
+four chairs positioned around it.  A cherry wardrobe sits against the south
+wall, handsomely carved and stained. A plush, handsome carpet covers the hard,
+cold stone floor.  It has been dyed black on red, the color of Thog's renegade
+army.  
+~
+0 8 0 0
+D1
+~
+oakdoor~
+353 7524 3889 0
+S
+#99999
+$~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

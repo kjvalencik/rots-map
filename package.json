@@ -1,0 +1,21 @@
+{
+  "name": "rots-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "K.J. Valencik",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "highland": "^2.11.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "*",
+    "babel-preset-env": "*",
+    "babel-register": "^6.24.1"
+  }
+}
