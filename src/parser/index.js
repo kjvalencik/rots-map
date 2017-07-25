@@ -2,6 +2,7 @@ import highland from "highland";
 
 import { Enumerator } from "../utils";
 import Room from "./room";
+import ExtraDescription from "./extra-description";
 import Exit from "./exit";
 
 const [
@@ -10,6 +11,8 @@ const [
 	TITLE,
 	DESCRIPTION,
 	EXTRA_DESCRIPTION,
+	EXTRA_DESCRIPTION_KEYWORD,
+	EXTRA_DESCRIPTION_DESCRIPTION,
 	ROOM_INFO,
 	EXIT_DIRECTION,
 	EXIT_DESCRIPTION,
@@ -21,6 +24,7 @@ const [
 export default function WorldParser() {
 	let state = INITIAL;
 	let room = null;
+	let description = null;
 	let exit = null;
 
 	function consumeNextLine(text) {
@@ -69,14 +73,33 @@ export default function WorldParser() {
 
 				break;
 
-			// TODO: Implement extra description parsing
 			case EXTRA_DESCRIPTION:
-				if (text[0] === "E") {
-					throw new SyntaxError("Extra description not implemented");
+				if (text === "E") {
+					description = new ExtraDescription();
+					state = EXTRA_DESCRIPTION_KEYWORD;
+				} else {
+					state = ROOM_INFO;
+					consumeNextLine(text);
 				}
 
-				state = ROOM_INFO;
-				consumeNextLine(text);
+				break;
+
+			case EXTRA_DESCRIPTION_KEYWORD:
+				description.keyword.push(text);
+
+				if (text.slice(-1) === "~") {
+					state = EXTRA_DESCRIPTION_DESCRIPTION;
+				}
+
+				break;
+
+			case EXTRA_DESCRIPTION_DESCRIPTION:
+				description.description.push(text);
+
+				if (text.slice(-1) === "~") {
+					state = EXTRA_DESCRIPTION;
+					room.extraDescriptions.push(description);
+				}
 
 				break;
 
@@ -124,7 +147,7 @@ export default function WorldParser() {
 				}
 
 				exit.info = text.split(" ").map(Number);
-				room.exits.push(exit.toJSON());
+				room.exits.push(exit);
 				state = EXIT_DIRECTION;
 
 				break;

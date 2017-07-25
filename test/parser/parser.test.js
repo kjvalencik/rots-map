@@ -18,7 +18,16 @@ describe("World Parser", () => {
 		read("../fixtures/entrance.wld")
 			.through(WorldParser())
 			.toPromise(Bluebird)
-			.then(({ number, title, description, type, level, flags, exits }) => {
+			.then(({
+				number,
+				title,
+				description,
+				extraDescriptions,
+				type,
+				level,
+				flags,
+				exits
+			}) => {
 				const descriptionStart = "   This is the entrance";
 				const descriptionEnd = ". \n";
 
@@ -35,6 +44,7 @@ describe("World Parser", () => {
 					descriptionEnd
 				);
 
+				assert.deepStrictEqual(extraDescriptions, []);
 				assert.strictEqual(type, "SECT_CITY");
 				assert.strictEqual(level, 0);
 				assert.deepStrictEqual(flags, ["NO_MOB"]);
@@ -154,5 +164,20 @@ describe("World Parser", () => {
 			.toPromise(Bluebird)
 			.then(() => Bluebird.reject(new Error("did not throw")))
 			.catch(SyntaxError, assert.ok)
+	));
+
+	it("should parse extra descriptions", () => (
+		read("../fixtures/extra-description.wld")
+			.through(WorldParser())
+			.toPromise(Bluebird)
+			.then(({ extraDescriptions }) => (
+				assert.deepStrictEqual(extraDescriptions, [{
+					keyword : "key1",
+					description : "Describes the\nfirst key.\n"
+				}, {
+					keyword : "key\n2",
+					description : "Describes the 2nd key"
+				}])
+			))
 	));
 });

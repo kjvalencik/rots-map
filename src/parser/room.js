@@ -41,6 +41,7 @@ export default class Room {
 		this.number = 0;
 		this.title = [];
 		this.description = [];
+		this.extraDescriptions = [];
 		this.exits = [];
 
 		// info
@@ -62,10 +63,11 @@ export default class Room {
 	toJSON() {
 		return {
 			number : this.number,
-			type  : this.type,
+			type : this.type,
 			level : this.level,
 			flags : this.flags,
-			exits : this.exits,
+			extraDescriptions : this.extraDescriptions.map(ex => ex.toJSON()),
+			exits : this.exits.map(exit => exit.toJSON()),
 			title : this.title.join("\n").slice(0, -1),
 			description : this.description.join("\n").slice(0, -1)
 		};
