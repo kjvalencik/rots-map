@@ -18,7 +18,7 @@ describe("World Parser", () => {
 		read("../fixtures/entrance.wld")
 			.through(WorldParser())
 			.toPromise(Bluebird)
-			.then(({ number, title, description, flags, exits }) => {
+			.then(({ number, title, description, type, level, flags, exits }) => {
 				const descriptionStart = "   This is the entrance";
 				const descriptionEnd = ". \n";
 
@@ -35,7 +35,9 @@ describe("World Parser", () => {
 					descriptionEnd
 				);
 
-				assert.deepStrictEqual(flags, [0, 4, 1, 0]);
+				assert.strictEqual(type, "SECT_CITY");
+				assert.strictEqual(level, 0);
+				assert.deepStrictEqual(flags, ["NO_MOB"]);
 
 				assert.deepStrictEqual(exits, [{
 					direction : "NORTH",
@@ -127,7 +129,7 @@ describe("World Parser", () => {
 	));
 
 	it("should error on invalid exit direction", () => (
-		highland(["#123\n~\n~\n0\nD6"])
+		highland(["#123\n~\n~\n0 0 0 0\nD6"])
 			.through(WorldParser())
 			.toPromise(Bluebird)
 			.then(() => Bluebird.reject(new Error("did not throw")))
@@ -135,7 +137,7 @@ describe("World Parser", () => {
 	));
 
 	it("should error on invalid exit flags", () => (
-		highland(["#123\n~\n~\n0\nD0\n~\n~\ninvalid"])
+		highland(["#123\n~\n~\n0 0 0 0\nD0\n~\n~\ninvalid"])
 			.through(WorldParser())
 			.toPromise(Bluebird)
 			.then(() => Bluebird.reject(new Error("did not throw")))

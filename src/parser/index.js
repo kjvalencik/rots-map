@@ -9,7 +9,7 @@ const [
 	TITLE,
 	DESCRIPTION,
 	EXTRA_DESCRIPTION,
-	ROOM_FLAGS,
+	ROOM_INFO,
 	EXIT_DIRECTION,
 	EXIT_DESCRIPTION,
 	EXIT_NAME,
@@ -86,18 +86,17 @@ export default function WorldParser() {
 					throw new SyntaxError("Extra description not implemented");
 				}
 
-				state = ROOM_FLAGS;
+				state = ROOM_INFO;
 				consumeNextLine(text);
 
 				break;
 
-			// TODO: Parse room flags
-			case ROOM_FLAGS:
+			case ROOM_INFO:
 				if (!/^\d+(?: \d+)*$/.test(text)) {
-					throw new SyntaxError("Invalid room flags");
+					throw new SyntaxError("Invalid room info");
 				}
 
-				room.flags = text.split(" ").map(Number);
+				room.info = text.split(" ").map(Number);
 				state = EXIT_DIRECTION;
 
 				break;
